@@ -6,6 +6,13 @@ class Product(models.Model):
 	name = models.CharField(max_length=255) #set max length to prohibit overly long names
 	price = models.FloatField() # for floating point numbers
 	stock = models.IntegerField()
-	image_irl = models.CharField(max_length=2083) #2083 standard max length for urls
+	image_url = models.CharField(max_length=2083) #2083 standard max length for urls
+	
+class Offer(models.Model):
+	code = models.CharField(max_length=8)
+	description = models.CharField(max_length=200)
+	discount = models.FloatField()
+	
+	
 
 
